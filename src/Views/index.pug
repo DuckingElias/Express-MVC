@@ -9,3 +9,10 @@ html
         em=article.createdAt
         p=article.content
       hr
+    form(method="POST" action="/")
+      input(type="text" name="title" required)#title
+      br
+      textarea(name="content" required)#content
+      br
+      br
+      input(type="submit" role="button" value="Speichern")
