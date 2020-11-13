@@ -15,13 +15,13 @@ export default class IndexController extends Controller {
         });
     }
 
-    postNewArticle = async() => {
-        logger.debug(this.req.body)
-        let article = await Article.create({
-            title:  this.req.body.title,
-            content: this.req.body.content
+    deleteArticle = async() => {
+        await Article.destroy({
+            where: {
+                id: this.req.body.id
+            }
         });
-        this.res.redirect("/");
+        this.res.end("OK");
     }
 
 }

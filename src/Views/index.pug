@@ -8,11 +8,9 @@ html
         h1=article.title
         em=article.createdAt
         p=article.content
+        br
+        button(data-id=article.id data-type="delete") Löschen
+        button(data-id=article.id data-type="update") Bearbeiten
       hr
-    form(method="POST" action="/")
-      input(type="text" name="title" required)#title
-      br
-      textarea(name="content" required)#content
-      br
-      br
-      input(type="submit" role="button" value="Speichern")
+    button#new Neu
+  script(src="index.js")

@@ -6,8 +6,8 @@ router.get("/", async (req, res, next) => {
     await new IndexController(req, res).getLatestArticles();
 });
 
-router.post("/", async (req, res, next) => {
-    await new IndexController(req, res).postNewArticle();
+router.delete("/", async (req, res, next) => {
+   await new IndexController(req, res).deleteArticle();
 });
 
 export {

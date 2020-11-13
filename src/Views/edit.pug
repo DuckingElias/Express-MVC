@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Start
+  body
+    form(method="POST" action=(article ? article.id : "/edit"))
+
+      if article
+        input(type="text" name="title" value=article.title required)#title
+      else
+        input(type="text" name="title" required)#title
+
+      br
+      if article
+        textarea(name="content" required)#content=article.content
+      else
+        textarea(name="content" required)#content
+      br
+      br
+      input(type="submit" role="button" value="Speichern")

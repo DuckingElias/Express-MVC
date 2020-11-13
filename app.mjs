@@ -7,6 +7,7 @@ const main = async () => {
     dotenv.config();
     await application.initialize();
     await application.registerRoute("/", "./Routes/IndexRoute.mjs");
+    await application.registerRoute("/edit", "./Routes/EditArticleRoute.mjs");
     await application.start();
 }
 
