@@ -3,4 +3,9 @@ html
   head
     title Start
   body
-    h1 Start :)
+    each article in articles
+      article
+        h1=article.title
+        em=article.createdAt
+        p=article.content
+      hr

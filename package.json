@@ -19,6 +19,8 @@
     "http-errors": "^1.8.0",
     "node-sass-middleware": "^0.11.0",
     "pug": "^3.0.0",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0",
     "winston": "^3.3.3",
     "winston-console-format": "^1.0.8"
   },
